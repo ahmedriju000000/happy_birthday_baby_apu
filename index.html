@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For My Cutieee Sister ❤️</title>
+
+<style>
+
+/* =========================
+   BASIC
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Comic Sans MS", cursive;
+}
+
+body{
+    overflow:hidden;
+    background:
+    linear-gradient(135deg,#ffc1df,#ffe8f3,#ffd1e5);
+}
+
+
+/* =========================
+   PAGE SYSTEM
+========================= */
+
+.page{
+    position:absolute;
+    width:100%;
+    height:100vh;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    transition:1s ease;
+}
+
+.hidden{
+    transform:translateX(-100%);
+    opacity:0;
+    pointer-events:none;
+}
+
+
+/* =========================
+   FIRST PAGE
+========================= */
+
+.rose{
+    font-size:100px;
+
+    animation:
+    floatRose 2s ease-in-out infinite alternate,
+    glow 2s infinite;
+}
+
+@keyframes floatRose{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-25px);
+    }
+
+}
+
+@keyframes glow{
+
+    50%{
+        filter:drop-shadow(0 0 25px #ff69b4);
+    }
+
+}
+
+
+.main-title{
+
+    font-size:45px;
+    color:#d63384;
+
+    text-shadow:
+    0 0 10px white,
+    0 0 25px pink;
+
+    margin:25px;
+
+}
+
+
+button{
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(45deg,#ff4f9a,#ff77b7);
+
+    color:white;
+
+    font-size:19px;
+
+    cursor:pointer;
+
+    box-shadow:
+    0 8px 25px rgba(255,50,150,.35);
+
+    transition:.3s;
+
+}
+
+
+button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:
+    0 10px 35px rgba(255,50,150,.5);
+
+}
+
+
+/* =========================
+   PHOTO SLIDESHOW
+========================= */
+
+.gallery-title{
+
+    color:#d63384;
+
+    font-size:38px;
+
+    margin-bottom:25px;
+
+}
+
+
+.slideshow{
+
+    width:300px;
+    height:380px;
+
+    position:relative;
+
+    border-radius:30px;
+
+    overflow:hidden;
+
+    border:10px solid white;
+
+    box-shadow:
+    0 10px 40px rgba(214,51,132,.3);
+
+    background:white;
+
+}
+
+
+.slide{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:0;
+
+    transform:scale(1.08);
+
+    transition:
+    opacity 1s ease,
+    transform 5s ease;
+
+}
+
+
+.slide.active{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+
+/* dots */
+
+.dots{
+
+    margin-top:18px;
+
+    display:flex;
+
+    gap:8px;
+
+}
+
+
+.dot{
+
+    width:10px;
+    height:10px;
+
+    background:#ff9dcc;
+
+    border-radius:50%;
+
+    transition:.3s;
+
+}
+
+
+.dot.active{
+
+    background:#d63384;
+
+    transform:scale(1.4);
+
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-box{
+
+    width:85%;
+
+    max-width:750px;
+
+    max-height:75vh;
+
+    overflow:auto;
+
+    padding:40px;
+
+    background:
+    rgba(255,255,255,.94);
+
+    border-radius:30px;
+
+    box-shadow:
+    0 15px 50px rgba(214,51,132,.25);
+
+}
+
+
+.letter-box h2{
+
+    color:#e83e8c;
+
+    font-size:35px;
+
+    margin-bottom:25px;
+
+}
+
+
+#typingText{
+
+    color:#555;
+
+    font-size:20px;
+
+    line-height:1.9;
+
+    white-space:pre-line;
+
+    text-align:left;
+
+}
+
+
+.cursor{
+
+    display:inline-block;
+
+    width:3px;
+
+    height:22px;
+
+    background:#e83e8c;
+
+    margin-left:3px;
+
+    animation:blink .7s infinite;
+
+}
+
+
+@keyframes blink{
+
+    50%{
+        opacity:0;
+    }
+
+}
+
+
+/* =========================
+   FALLING FLOWERS
+========================= */
+
+.flower{
+
+    position:fixed;
+
+    top:-50px;
+
+    pointer-events:none;
+
+    z-index:100;
+
+    animation:
+    flowerFall linear forwards;
+
+}
+
+
+@keyframes flowerFall{
+
+    0%{
+
+        transform:
+        translateY(-50px)
+        rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+        translateY(110vh)
+        rotate(360deg);
+
+        opacity:.2;
+
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    .main-title{
+
+        font-size:32px;
+
+    }
+
+    .rose{
+
+        font-size:75px;
+
+    }
+
+    .gallery-title{
+
+        font-size:30px;
+
+    }
+
+    .slideshow{
+
+        width:250px;
+        height:320px;
+
+    }
+
+    .letter-box{
+
+        width:92%;
+
+        padding:25px;
+
+    }
+
+    #typingText{
+
+        font-size:17px;
+
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     PAGE 1
+================================================== -->
+
+<section class="page" id="page1">
+
+    <div class="rose">
+        🌹
+    </div>
+
+    <h1 class="main-title">
+
+        Flowers for my<br>
+
+        cutieee flower sister 🌸
+
+    </h1>
+
+    <button onclick="goToPage(2)">
+
+        Open 💝
+
+    </button>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 2
+================================================== -->
+
+<section class="page hidden" id="page2">
+
+    <h2 class="gallery-title">
+
+        My Beautiful Flower Sister 🌸
+
+    </h2>
+
+
+    <div class="slideshow">
+
+        <!-- Change these image names -->
+
+        <img
+            src="pic1.jpg"
+            class="slide active"
+            alt="Memory 1"
+        >
+
+        <img
+            src="pic2.jpg"
+            class="slide"
+            alt="Memory 2"
+        >
+
+        <img
+            src="pic3.jpg"
+            class="slide"
+            alt="Memory 3"
+        >
+
+        <img
+            src="pic4.jpg"
+            class="slide"
+            alt="Memory 4"
+        >
+
+    </div>
+
+
+    <div class="dots">
+
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+
+    </div>
+
+
+    <button onclick="goToPage(3)">
+
+        There's Something I Want To Tell You 💌
+
+    </button>
+
+</section>
+
+
+
+<!-- ==================================================
+     PAGE 3
+================================================== -->
+
+<section class="page hidden" id="page3">
+
+
+    <div class="letter-box">
+
+        <h2>
+            Happy Birthday My Cutie Sister 🎂❤️
+        </h2>
+
+
+        <div id="typingText"></div>
+
+        <span class="cursor"></span>
+
+    </div>
+
+
+</section>
+
+
+
+<script>
+
+/* ==================================================
+   PAGE TRANSITION
+================================================== */
+
+function goToPage(pageNumber){
+
+    document
+        .querySelectorAll(".page")
+        .forEach(page => {
+
+            page.classList.add("hidden");
+
+        });
+
+
+    document
+        .getElementById("page" + pageNumber)
+        .classList.remove("hidden");
+
+
+    if(pageNumber === 3){
+
+        startTyping();
+
+    }
+
+}
+
+
+/* ==================================================
+   PHOTO SLIDESHOW
+================================================== */
+
+let currentSlide = 0;
+
+const slides =
+document.querySelectorAll(".slide");
+
+const dots =
+document.querySelectorAll(".dot");
+
+
+function showSlide(index){
+
+    slides.forEach(slide => {
+
+        slide.classList.remove("active");
+
+    });
+
+
+    dots.forEach(dot => {
+
+        dot.classList.remove("active");
+
+    });
+
+
+    slides[index].classList.add("active");
+
+    dots[index].classList.add("active");
+
+}
+
+
+setInterval(() => {
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+
+        currentSlide = 0;
+
+    }
+
+    showSlide(currentSlide);
+
+},4000);
+
+
+
+/* ==================================================
+   TYPING ANIMATION
+================================================== */
+
+const letter = `
+শুভ জন্মদিন আপু! 🎂❤️
+Many many happy returns of the day! 🌸
+
+জীবনে যতগুলো মানুষ পেয়েছি, তাদের মধ্যে তুমি নিঃসন্দেহে অন্যতম একজন। বরং বলতে গেলে, **the best out of the bests**। 🥹❤️
+
+তোমার বিয়েটা দেখার অনেক ইচ্ছা ছিল, but মিস করে ফেলেছি। 🥺 
+
+দোয়া করি, ভাইয়াকে নিয়ে সারাজীবন অনেক সুখে থাকো। তোমাদের সংসারটা যেন ভালোবাসা, শান্তি, হাসি আর অসংখ্য সুন্দর মুহূর্তে ভরে থাকে। জীবনের প্রতিটা নতুন দিন যেন তোমাদের জন্য আরও সুন্দর কিছু নিয়ে আসে। 🤲❤️
+
+
+আর হ্যাঁ... 
+তোমার birthday treat কিন্তু এখনো বাকি রয়ে গেল!
+দেখা হলে শুধু treat দিলেই হবে না, এতদিনের অপেক্ষার interest সহ ফেরত দিতে হবে কিন্তু! 😌❤️
+
+অনেক ভালো থেকো আপু।
+সবসময় হাসিখুশি থেকো, সুখে থেকো, আর এমনই সুন্দর মনের মানুষ হয়ে থেকো। ❤️
+
+**Happy Birthday, Apu! 🎂🌹❤️**
+
+`;
+
+let typingStarted = false;
+
+
+function startTyping(){
+
+    if(typingStarted) return;
+
+    typingStarted = true;
+
+    const textElement =
+    document.getElementById("typingText");
+
+    let index = 0;
+
+
+    function type(){
+
+        if(index < letter.length){
+
+            textElement.textContent +=
+            letter.charAt(index);
+
+            index++;
+
+            setTimeout(type,35);
+
+        }
+
+    }
+
+
+    type();
+
+}
+
+
+/* ==================================================
+   FALLING FLOWERS
+================================================== */
+
+const flowers = [
+    "🌹",
+    "🌸",
+    "🌷",
+    "🌺",
+    "💮",
+    "💕"
+];
+
+
+function createFlower(){
+
+    const flower =
+    document.createElement("div");
+
+    flower.className = "flower";
+
+    flower.innerHTML =
+    flowers[
+        Math.floor(
+            Math.random() * flowers.length
+        )
+    ];
+
+
+    flower.style.left =
+    Math.random() * 100 + "vw";
+
+
+    flower.style.fontSize =
+    (20 + Math.random() * 25) + "px";
+
+
+    flower.style.animationDuration =
+    (4 + Math.random() * 5) + "s";
+
+
+    document.body.appendChild(flower);
+
+
+    setTimeout(() => {
+
+        flower.remove();
+
+    },9000);
+
+}
+
+
+setInterval(createFlower,350);
+
+</script>
+
+</body>
+</html>
